@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=1818;
+		nextID=1822;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=147;
+		nextID=160;
 	};
 	class Camera
 	{
-		pos[]={9642.5879,179.76474,13623.041};
-		dir[]={0.053209748,-0.5724836,-0.81829947};
-		up[]={0.037153214,0.81983596,-0.57136905};
-		aside[]={-0.99798244,5.1973257e-007,-0.06489405};
+		pos[]={9716.4951,155.30461,13588.552};
+		dir[]={-0.39691043,-0.8364985,-0.37781179};
+		up[]={-0.60592198,0.5479036,-0.57676637};
+		aside[]={-0.6894688,-9.9011231e-008,0.72432238};
 	};
 };
 binarizationWanted=0;
@@ -249,11 +249,11 @@ randomSeed=10324611;
 class ScenarioData
 {
 	author="Vocasyan";
-	overviewText="Find a box of weapons ";
-	overviewTextLocked="Find a box of weapons";
+	overviewText="PMC extract military emissary and  weapon box";
+	overviewTextLocked="PMC extract military emissary and  weapon box";
 	overViewPicture="overview.jpg";
 	overViewPictureLocked="overview.jpg";
-	onLoadMission="Find a box of weapons";
+	onLoadMission="PMC extract military emissary and  weapon box";
 	loadScreen="overview.jpg";
 	saving=0;
 	respawnDialog=0;
@@ -272,25 +272,6 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=0;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -337,6 +318,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
 				};
 			};
 		};
@@ -395,7 +395,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=61;
+		items=63;
 		class Item0
 		{
 			dataType="Layer";
@@ -1373,6 +1373,7 @@ class Mission
 					init="tSF_FARP_Composition = ""NATO HEMTT Woodland RFA""";
 					id=1813;
 					type="Logic";
+					atlOffset=-0.00012207031;
 				};
 			};
 			id=63;
@@ -3640,7 +3641,7 @@ class Mission
 			name="dzn_Gear Layer";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Logic";
@@ -3664,9 +3665,21 @@ class Mission
 					id=1773;
 					type="Logic";
 				};
+				class Item2
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={12261.952,18.187635,9494.6426};
+					};
+					init="call{this setVariable ['dzn_gear', 'kit_pmc_vip'];}";
+					id=1818;
+					type="Logic";
+					atlOffset=-0.0039997101;
+				};
 			};
 			id=1757;
-			atlOffset=-138.47833;
+			atlOffset=-71.114868;
 		};
 		class Item48
 		{
@@ -4837,16 +4850,53 @@ class Mission
 				nAttributes=1;
 			};
 		};
+		class Item61
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9639.9658,109.07782,13417.263};
+			};
+			name="HC";
+			isPlayer=1;
+			id=1819;
+			type="HeadlessClient_F";
+			atlOffset=7.6293945e-006;
+		};
+		class Item62
+		{
+			dataType="Layer";
+			name="dzn_Gear Layer_1";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={9692.4395,83.777924,13557.639};
+						angles[]={0.18891445,0,6.2581573};
+					};
+					init="call{this setVariable ['dzn_gear_cargo', 'cargo_ammo'];}";
+					id=1821;
+					type="Logic";
+					atlOffset=-1.5258789e-005;
+				};
+			};
+			id=1820;
+			atlOffset=-1.5258789e-005;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=30;
+			nextID=38;
 		};
 		class Links
 		{
-			items=30;
+			items=38;
 			class Item0
 			{
 				linkID=0;
@@ -5142,6 +5192,86 @@ class Mission
 				linkID=29;
 				item0=1780;
 				item1=1779;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item30
+			{
+				linkID=30;
+				item0=1818;
+				item1=1812;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item31
+			{
+				linkID=31;
+				item0=1630;
+				item1=1821;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item32
+			{
+				linkID=32;
+				item0=1632;
+				item1=1821;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item33
+			{
+				linkID=33;
+				item0=1634;
+				item1=1821;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item34
+			{
+				linkID=34;
+				item0=1662;
+				item1=1821;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item35
+			{
+				linkID=35;
+				item0=1665;
+				item1=1821;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item36
+			{
+				linkID=36;
+				item0=1707;
+				item1=1821;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item37
+			{
+				linkID=37;
+				item0=1799;
+				item1=1821;
 				class CustomData
 				{
 					type="Sync";
