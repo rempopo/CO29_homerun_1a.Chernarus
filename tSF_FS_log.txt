@@ -1,0 +1,10 @@
+"####### tSF File Sweeper Engaged #######" 
+Mission directory:     C:\Users\Vocasyan\Documents\Arma 3\mpmissions\CO29_The_Voice_of_Freedom_1a.Chernarus\ 
+Mission fodler name:   CO29_The_Voice_of_Freedom_1a 
+Removing tSF Helpers 
+Removing DynAI Helpers 
+Removing unused tSF Modules 
+    Folder is not used: Removing EditorVehicleCrew 
+    Folder is not used: Removing EditorUnitBehavior 
+    Folder is not used: Removing EditorRadioSettings 
+Done! 
