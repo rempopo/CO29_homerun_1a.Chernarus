@@ -5,4 +5,4 @@ PMC rescue ambushed convoy, and capture highly valuable assets
 Reviewer | Result 
 ------------ | -------------
 lim | approved
-n/a | n/a
+Comrade | approved
